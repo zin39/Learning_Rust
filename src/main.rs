@@ -22,8 +22,6 @@
 //    println!("word count = {}", word_count);
 //    println!("contain rust: {}", contain_rust);
 
-use std::arch::x86_64::_MM_SET_FLUSH_ZERO_MODE;
-
 struct Book {
     title: String,
     author: String,
@@ -34,7 +32,7 @@ impl Book {
     fn new(title: &str, author: &str, publication_year: u32) -> Book {
         Book {
             title: title.to_string(),
-            author: title.to_string(),
+            author: author.to_string(),
             publication_year,
         }
     }
